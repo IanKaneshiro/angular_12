@@ -12,4 +12,7 @@ export class AppComponent {
   getName(name: string) {
     alert(name);
   }
+  getData(val: string) {
+    console.warn(val);
+  }
 }
