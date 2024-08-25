@@ -6,10 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = '12';
-  data = 'Hello Coders';
+  title = 'blog';
+  data = 'hello code';
   num = 100;
-  getVal() {
-    return 'code step by step';
+  getName(name: string) {
+    alert(name);
   }
 }
