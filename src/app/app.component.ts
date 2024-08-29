@@ -7,11 +7,13 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'Working with Forms!';
-  userData: any = {};
-
-  getData(formData: NgForm) {
-    console.warn(formData.value);
-    this.userData = formData.value;
+  title = 'To do list!';
+  toDos: any[] = [];
+  addTodo(item: string) {
+    this.toDos.push({ id: this.toDos.length, name: item });
+    console.log(this.toDos);
+  }
+  removeTodo(id: number) {
+    this.toDos = this.toDos.filter((todo) => todo.id !== id);
   }
 }

@@ -1,22 +1,13 @@
 <app-header></app-header>
 <h1>{{ title }}</h1>
-<form #basicForm="ngForm" (submit)="getData(basicForm)">
-  <input ngModel type="text" name="user" placeholder="Enter Username" />
-  <br />
-  <input ngModel type="text" name="email" placeholder="Enter Email" />
-  <br />
-  <input ngModel type="text" name="password" placeholder="Enter Password" />
-  <br />
-  <button>Register</button>
-</form>
-<ul>
+<input type="text" placeholder="Enter New Task" #task />
+<br />
+<br />
+<button (click)="addTodo(task.value)">Add New Task</button>
+
+<ul *ngFor="let item of toDos">
   <li>
-    {{ userData.user }}
-  </li>
-  <li>
-    {{ userData.email }}
-  </li>
-  <li>
-    {{ userData.password }}
+    {{ item.name }}
+    <button (click)="removeTodo(item.id)">Remove</button>
   </li>
 </ul>
