@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'Basic Styling in Angular';
-  color = 'pink';
+  title = 'Working with Forms!';
+  userData: any = {};
+
+  getData(formData: NgForm) {
+    console.warn(formData.value);
+    this.userData = formData.value;
+  }
 }
