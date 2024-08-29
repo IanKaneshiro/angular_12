@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Basic Styling in Angular';
-  color = 'red';
+  color = 'pink';
 }
